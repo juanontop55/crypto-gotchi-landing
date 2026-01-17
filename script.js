@@ -51,8 +51,8 @@ async function handleAirdropSubmit(e) {
     btn.disabled = true;
 
     try {
-        // Send data to backend
-        const response = await fetch('/api/register', {
+        // Send data to backend (Railway)
+        const response = await fetch('https://crypto-gotchi-landing-production.up.railway.app/api/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

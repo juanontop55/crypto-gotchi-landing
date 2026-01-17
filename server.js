@@ -68,6 +68,16 @@ app.post('/api/register', (req, res) => {
     res.json({ success: true, message: 'Registration successful!' });
 });
 
+// Admin Route: View Data (Simple)
+app.get('/api/registrations', (req, res) => {
+    if (fs.existsSync(DB_FILE)) {
+        const data = JSON.parse(fs.readFileSync(DB_FILE, 'utf8'));
+        res.json(data);
+    } else {
+        res.json([]);
+    }
+});
+
 // Fallback to index.html for any other route (SPA behavior)
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));

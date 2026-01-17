@@ -189,6 +189,19 @@ header {
     background: #000;
 }
 
+.wip-text {
+    text-align: center;
+    color: var(--text-muted);
+    font-family: 'Space Mono', monospace;
+    font-size: 0.9rem;
+    margin-top: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.7;
+    width: 100%;
+    /* Force it to take full width of container to be centered properly if wrapped */
+}
+
 /* Stagger animations */
 .app-preview:first-child {
     animation-delay: 0s;

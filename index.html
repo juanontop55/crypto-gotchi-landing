@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Gothci - Your Living Wallet</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Background Animation -->
+    <div class="background-globes">
+        <div class="globe globe-1"></div>
+        <div class="globe globe-2"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fa-solid fa-ghost"></i> Crypto Gothci
+            </div>
+            <nav>
+                <a href="#airdrop" class="main-btn outline" style="padding: 10px 20px; font-size: 0.9rem;">Join
+                    Airdrop</a>
+            </nav>
+        </header>
+
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Your Living, Breathing <br> <span class="neon-text">Crypto Gothci</span></h1>
+                <p class="hero-subtitle">
+                    Ready to turn your gaming hours into digital gold? Welcome to CryptoGotchi, the ultimate
+                    Play-to-Earn ecosystem. In this world, every interaction is an investment. Breed rare traits,
+                    complete daily quests, and climb the leaderboards to stack tokens. Don't just play for fun—play for
+                    the future. Mint your egg, master the grind, and start earning in the most addictive pet-sim on the
+                    chain.
+                </p>
+
+                <div class="pet-showcase">
+                    <!-- App Preview 1 -->
+                    <img src="assets/app_preview.png" alt="Crypto Gotchi Main Interface" class="app-preview">
+                    <!-- App Preview 2 -->
+                    <img src="assets/app_preview_2.png" alt="Crypto Gotchi Inventory Interface" class="app-preview">
+                </div>
+                <p class="wip-text">Work in progress</p>
+
+            </div>
+        </section>
+
+        <section id="airdrop" class="airdrop-section">
+            <div class="glass-panel">
+                <h2 class="airdrop-title">Join the <span class="neon-text">Airdrop</span></h2>
+                <p style="text-align: center; margin-bottom: 30px; color: var(--text-muted);">
+                    Complete the tasks below to qualify for the token airdrop.
+                </p>
+
+                <div class="step-list">
+                    <a href="https://x.com/CryptoGotchiX" target="_blank" class="step-item" id="step-twitter"
+                        onclick="completeStep('twitter')">
+                        <div class="step-icon"><i class="fa-brands fa-twitter"></i></div>
+                        <div class="step-content">
+                            <h3>Follow on X</h3>
+                            <p>Stay updated with our latest news</p>
+                        </div>
+                        <div class="step-check"><i class="fa-solid fa-circle-check"></i></div>
+                    </a>
+
+                    <a href="https://www.instagram.com/cryptogotchix/" target="_blank" class="step-item"
+                        id="step-instagram" onclick="completeStep('instagram')">
+                        <div class="step-icon"><i class="fa-brands fa-instagram"></i></div>
+                        <div class="step-content">
+                            <h3>Follow on Instagram</h3>
+                            <p>Join our visual community</p>
+                        </div>
+                        <div class="step-check"><i class="fa-solid fa-circle-check"></i></div>
+                    </a>
+
+                    <a href="https://discord.gg/NSfSaSSSn3" target="_blank" class="step-item" id="step-discord"
+                        onclick="completeStep('discord')">
+                        <div class="step-icon"><i class="fa-brands fa-discord"></i></div>
+                        <div class="step-content">
+                            <h3>Join our Discord</h3>
+                            <p>Become part of the community</p>
+                        </div>
+                        <div class="step-check"><i class="fa-solid fa-circle-check"></i></div>
+                    </a>
+                </div>
+
+                <form id="airdrop-form" onsubmit="handleAirdropSubmit(event)">
+                    <div class="input-group">
+                        <input type="email" id="email" class="input-field" placeholder="Enter your email address"
+                            required>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="wallet" class="input-field"
+                            placeholder="Enter your ERC wallet address (0x...)" required pattern="^0x[a-fA-F0-9]{40}$"
+                            title="Please enter a valid ERC address starting with 0x">
+                    </div>
+                    <button type="submit" id="btn-register" class="main-btn"
+                        style="width: 100%; justify-content: center; opacity: 0.5; cursor: not-allowed;" disabled>
+                        Register for Airdrop
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Crypto Gothci. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
